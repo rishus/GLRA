@@ -109,7 +109,7 @@ c = 92
 A = np.zeros((r,c,n))
 target = np.zeros((n))
 for f in range(0,40):
-    path = "/home/rishu/Courses/CS5526Spring2015/project/att_faces/s" + str(f+1)
+    path = "/home/rishu/ImMLproject1/att_faces/s" + str(f+1)
     os.chdir(path)
     for i in range(0, 10):
         fn = str(i+1)+".pgm"
@@ -120,7 +120,7 @@ for f in range(0,40):
 Asvd = np.zeros((r*c,n))
 tmp = np.zeros((r, c))
 for f in range(0,40):
-    path = "/home/rishu/Courses/CS5526Spring2015/project/att_faces/s" + str(f+1)
+    path = "/home/rishu/ImMLproject1/att_faces/s" + str(f+1)
     os.chdir(path)
     for i in range(0, 10):
         fn = str(i+1)+".pgm"
@@ -138,7 +138,7 @@ for f in range(0,40):
 
 ########################################################         
                             # leaf dataset 
-path = "/home/rishu/Courses/CS5526Spring2015/project/leaves"
+path = "/home/rishu/ImMLproject1/leaves"
 os.chdir(path)
 img = mpimg.imread("image_0001.jpg")
 gray = rgb2gray(img)
@@ -188,7 +188,7 @@ for i in range(0, n):
 
 ########################################################         
                             # menu dataset 
-path = "/home/rishu/Courses/CS5526Spring2015/project/menuMatch/foodimages"
+path = "/home/rishu/ImMLproject1/menuMatch/foodimages"
 os.chdir(path)
 img = mpimg.imread("img1.jpg")  # note that images have different sizes here. i'm cropping to smallest
 gray = rgb2gray(img)
@@ -201,10 +201,10 @@ A = np.zeros((r,c,n))
 target = np.zeros((n))
 n_curr = 0
 for cuis in cuisine:
-    path = "/home/rishu/Courses/CS5526Spring2015/project/menuMatch/foodimages"
+    path = "/home/rishu/ImMLproject1/menuMatch/foodimages"
     os.chdir(path)
     onlyfiles = [ f for f in os.listdir(cuis) if os.path.isfile(os.path.join(cuis,f)) ]
-    path = "/home/rishu/Courses/CS5526Spring2015/project/menuMatch/foodimages/"+cuis
+    path = "/home/rishu/ImMLproject1/menuMatch/foodimages/"+cuis
     os.chdir(path)
     for fn in onlyfiles:
         img = mpimg.imread(fn)
@@ -232,10 +232,10 @@ for cuis in cuisine:
 # SVD approximation
 Asvd = np.zeros((r*c,n))
 for i in range(0, n):
-    path = "/home/rishu/Courses/CS5526Spring2015/project/menuMatch/foodimages"
+    path = "/home/rishu/ImMLproject1/menuMatch/foodimages"
     os.chdir(path)
     onlyfiles = [ f for f in os.listdir(cuis) if os.path.isfile(os.path.join(cuis,f)) ]
-    path = "/home/rishu/Courses/CS5526Spring2015/project/menuMatch/foodimages/"+cuis
+    path = "/home/rishu/ImMLproject1/menuMatch/foodimages/"+cuis
     os.chdir(path)
         
     for fn in onlyfiles:
@@ -264,7 +264,7 @@ for i in range(0, n):
     
 ###############################################
 
-path = "/home/rishu/Courses/CS5526Spring2015/project/"
+path = "/home/rishu/ImMLproject1/"
 os.chdir(path)    
 
 dall = [2*i for i in range(0,10) ]
