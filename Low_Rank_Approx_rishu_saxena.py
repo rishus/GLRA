@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 12 16:06:28 2015
-
-@author: rishu
-"""
-
-# -*- coding: utf-8 -*-
 """
 Created on Tue May 4 06:46:15 2015
 
